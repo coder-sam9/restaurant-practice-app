@@ -1,8 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
+import classes from './Card.module.css'
 
 function Card(props){
   return (
-    <Fragment></Fragment>
+    <div className={classes.card}>
+        {props.children}
+    </div>
   )
 }
 
