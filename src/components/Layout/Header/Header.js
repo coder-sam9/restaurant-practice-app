@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import Button from '../../UI/Button/Button'
-import MealsHeader from '../../../assets/images/meals-header.png';
+import MealsHeader from '../../../assets/images/meals.png';
 import classes from './Header.module.css';
 import HeaderCardButton from './HeaderCardButton';
 
