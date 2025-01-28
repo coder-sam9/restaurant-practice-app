@@ -4,7 +4,7 @@ import MealsHeader from '../../../assets/images/meals.png';
 import classes from './Header.module.css';
 import HeaderCardButton from './HeaderCardButton';
 
-function Header() {
+function Header({openCart}) {
   return (
     <Fragment>
 
@@ -12,7 +12,7 @@ function Header() {
       <h1>
         ReactMeals
       </h1>
-      <HeaderCardButton/>
+      <HeaderCardButton onOpen={()=>openCart()}/>
     </header>
       <div className={classes['main-image']}>
         <img src={MealsHeader} alt='Meals Header'/>
