@@ -18,7 +18,7 @@ function HeaderCardButton({onOpen}) {
             Your Cart
         </span>
         <span className={classes.badge}>
-            {cart.items.length}
+            {cart.totalItems}
         </span>
     </button>
   )

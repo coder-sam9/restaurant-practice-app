@@ -7,7 +7,7 @@ function Input(props) {
         <label htmlFor={props.input.id}>
 {props.input.label}
     </label>
-    <input {...props.input} value={props.defaultValue} disabled />
+    <input {...props.input} disabled />
     </div>
   )
 }
