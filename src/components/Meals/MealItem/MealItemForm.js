@@ -4,8 +4,8 @@ import Input from '../../UI/Input/Input'
 function MealItemForm(props) {
     const input={
         label:'Amount',
-        id:'mealCount',
-        value:1,
+        id:'amount_'+props.id,
+        defaultValue:1,
         type:'number'
     }
   return (

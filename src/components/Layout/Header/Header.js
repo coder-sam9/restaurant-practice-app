@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import Button from '../../UI/Button/Button'
+
 import MealsHeader from '../../../assets/images/meals.png';
 import classes from './Header.module.css';
 import HeaderCardButton from './HeaderCardButton';
@@ -15,7 +15,7 @@ function Header() {
       <HeaderCardButton/>
     </header>
       <div className={classes['main-image']}>
-        <img src={MealsHeader}/>
+        <img src={MealsHeader} alt='Meals Header'/>
       </div>
     </Fragment>
   )

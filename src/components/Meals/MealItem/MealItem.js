@@ -17,7 +17,7 @@ function MealItem(props) {
             </div>
         </div>
         <div>
-            <MealItemForm />
+            <MealItemForm id={props.id}/>
         </div>
     </li>
   )
