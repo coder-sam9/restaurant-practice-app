@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import classes from './Cart.module.css'
 import Modal from '../UI/Modal/Modal'
+import CartContext from '../../store/cart-context';
 function Cart({onClose}) {
+    const cart=useContext(CartContext);
     const cartItem=(<ul>{
 
-    [{id:1,name:'Sushi',amount:2,price:12.99}].map(item=>{return <li key={item.id}> 
+    cart.items.map(item=>{return <li key={item.id}> 
         {item.name}
     </li>})}
     </ul>);
@@ -17,7 +19,7 @@ function Cart({onClose}) {
         {cartItem}
         <div className={classes.total}>
             <span>Total Amount</span>
-            <span>35.62</span>
+            <span>{cart.totalAmount}</span>
         </div>
         <div className={classes.actions}>
             <button className={classes['button-alt']} onClick={()=>closeCart()} >Close</button>

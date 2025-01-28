@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Button from '../../UI/Button/Button.js';
 import CartIcon from '../../../assets/icons/CartIcon.js';
 import classes from './HeaderButtonCart.module.css'
+import CartContext from '../../../store/cart-context.js';
 
 function HeaderCardButton({onOpen}) {
+  const cart=useContext(CartContext);
   const openCart=()=>{
     onOpen();
   }
@@ -16,7 +18,7 @@ function HeaderCardButton({onOpen}) {
             Your Cart
         </span>
         <span className={classes.badge}>
-            3
+            {cart.items.length}
         </span>
     </button>
   )
